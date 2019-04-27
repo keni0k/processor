@@ -1,0 +1,9 @@
+LOAD R0, 0  	#  0  x  x  x  x 
+load R4, 5  	#  0  x  x  x  5
+load R3, 10 	#  0  x  x 10  5
+addi R4, R0, 7  #  0  x  x 10  7
+sub R1, R3, R4  #  0  3  x 10  7
+load R2, 4 	#  0 10  4 10  7
+add R1, R1, R2  #  0 14  4 10  7
+add R1, R1, R3  #  0 24  4 10  7
+add R1, R1, R4  #  0 31  4 10  7
