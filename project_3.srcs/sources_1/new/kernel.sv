@@ -25,12 +25,11 @@ module kernel
     (
     input  logic                        clk,
     input  logic                        reset,
-    input  logic [ROM_WIDTH-1:0]        i_ReadData,
+    input  logic [ROM_WIDTH-1:0]        readData,
     output logic                        readyToWrite,
-    output logic [ROM_WIDTH-1:0]        writeData,
-    output logic [ROM_ADDR_BITS-1:0]    address
+    output logic [ROM_WIDTH-1:0]        writeData
     );
     
-    controller controller_0 (.clk( clk ), .reset(reset), .funct(funct ), .op(op));
+    controller controller_0 (.clk(clk), .reset(reset), .funct(funct), .op(op));
     
 endmodule
