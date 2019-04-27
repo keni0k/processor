@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Programming/schemotechnika/project_3/project_3.srcs/sim_1/new/memory_tb.sv,1555848737,systemVerilog,,,,memory_tb,,,,,,,,
+C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/ALU.sv,1555746702,systemVerilog,,,,ALU,,,,,,,,
+C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/memory.sv,1555861934,systemVerilog,,C:/Programming/schemotechnika/project_3/project_3.srcs/sim_1/new/memory_tb.sv,,memory,,,,,,,,
