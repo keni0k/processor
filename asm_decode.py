@@ -5,7 +5,7 @@ commands = ['addi', 'subi', 'add', 'sub', 'mul', 'div',
 
 def dec_to_bin(x, count):
     x_bin = bin(int(x))[2:]
-    while (len(x_bin)<count):
+    while (len(x_bin) < count):
         x_bin = '0' + x_bin
     return x_bin
 
