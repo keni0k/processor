@@ -1,5 +1,7 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
+"../../../../project_3.srcs/sources_1/new/ALU.sv" \
+"../../../../../—хемотехника/adder_64.srcs/sources_1/new/adder_64.sv" \
 "../../../../project_3.srcs/sources_1/new/memory.sv" \
 "../../../../project_3.srcs/sim_1/new/memory_tb.sv" \
 

@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log ALU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+    with args -log kernel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kernel.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,15 +8,253 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source ALU.tcl -notrace
-Command: synth_design -top ALU -part xc7vx485tffg1157-1
+source kernel.tcl -notrace
+Command: synth_design -top kernel -part xc7a12ticsg325-1L
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
-WARNING: [Common 17-348] Failed to get the license for feature 'Synthesis' and/or device 'xc7vx485t'. Explanation: A license feature for Synthesis was found but is expired.
-Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
-0 Infos, 1 Warnings, 0 Critical Warnings and 1 Errors encountered.
-synth_design failed
-ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xc7vx485t'. Please run the Vivado License Manager for assistance in determining
-which features and devices are licensed for your system.
-Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Please note that Vivado 2017.3 and later requires upgrading your license server tools to the Flex 11.14.1 tools. Please confirm with your license admin that the correct version of the license server tools are installed.
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 20 16:38:56 2019...
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9336 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 430.336 ; gain = 98.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'kernel' [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:23]
+	Parameter ROM_WIDTH bound to: 8 - type: integer 
+	Parameter ROM_ADDR_BITS bound to: 8 - type: integer 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:33]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/controller.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (1#1) [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/controller.sv:23]
+WARNING: [Synth 8-350] instance 'controller_0' of module 'controller' requires 9 connections, but only 4 given [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:33]
+WARNING: [Synth 8-3848] Net readyToWrite in module/entity kernel does not have driver. [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:29]
+WARNING: [Synth 8-3848] Net writeData in module/entity kernel does not have driver. [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:30]
+WARNING: [Synth 8-3848] Net funct in module/entity kernel does not have driver. [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:33]
+WARNING: [Synth 8-3848] Net op in module/entity kernel does not have driver. [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'kernel' (2#1) [C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/kernel.sv:23]
+WARNING: [Synth 8-3331] design kernel has unconnected port readyToWrite
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[7]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[6]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[5]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[4]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[3]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[2]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[1]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[0]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[7]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[6]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[5]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[4]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[3]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[2]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[1]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 486.063 ; gain = 154.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 486.063 ; gain = 154.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 486.063 ; gain = 154.398
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 486.063 ; gain = 154.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design kernel has unconnected port readyToWrite
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[7]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[6]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[5]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[4]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[3]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[2]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[1]
+WARNING: [Synth 8-3331] design kernel has unconnected port writeData[0]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[7]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[6]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[5]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[4]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[3]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[2]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[1]
+WARNING: [Synth 8-3331] design kernel has unconnected port readData[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 581.648 ; gain = 249.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 582.340 ; gain = 250.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4649] Removing BlackBox instance controller_0 of module controller having unconnected or no output ports
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUFT |     9|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     9|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 591.875 ; gain = 260.211
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 694.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 694.449 ; gain = 375.793
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 694.449 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Programming/schemotechnika/project_3/project_3.runs/synth_1/kernel.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file kernel_utilization_synth.rpt -pb kernel_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 28 15:09:05 2019...

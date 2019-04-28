@@ -1,11 +1,11 @@
 commands = ['addi', 'subi', 'add', 'sub', 'mul', 'div',
             'load', 'store',
             'and', 'xor', 'or', 
-            'branch', 'jump_reg', 'jump', 'none']
+            'branch', 'jump', 'none']
 
 def dec_to_bin(x, count):
     x_bin = bin(int(x))[2:]
-    while (len(x_bin) < count):
+    while (len(str(x_bin)) < count):
         x_bin = '0' + x_bin
     return x_bin
 
@@ -17,12 +17,16 @@ def preproc(line):
         two_bites = ''
         for idx, word in enumerate(line.split()):
                 if idx < 3:
-                        count = 5
+                        count = 4 + idx
                 else:
-                        count = 9
+                        count = 10
+               	if idx == 2:
+               			count -=1
+                if idx == 2 and two_bites.startswith('0110'):
+                		count +=3
                 two_bites += dec_to_bin(word, count)
-        if len(two_bites) == 15:
-                two_bites += '000000000'
+        while len(two_bites) < 24:
+                two_bites += '0'
         return two_bites
 
 with open("asm_prog.txt", "r") as file_in:
