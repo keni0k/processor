@@ -1,15 +1,13 @@
-LOAD R0, 0  	#  R0 0  R1 x  R2 x R3 x R4 x R5 x
-load R4, 5  	#     0     x     x    x    5    x
-load R3, 10 	#     0     x     x   10    5    x
-addi R4, R0, 7  #     0     x     x   10    7    x
-sub R1, R3, R4  #     0     3     x   10    7    x
-load R2, 4 		#     0     3     4   10    7    x
-add R1, R1, R2  #     0     7     4   10    7    x
-add R1, R1, R3  #     0    17     4   10    7    x
-add R1, R1, R4  #     0    24     4   10    7    x
-load R5, 250	#     0    24     4   10    7  250
-jump 12
-sub R1, R1, R5  #     0   -..(M)  4   10    7  250
-addi R5, R5, 1
-jump 10
-none
+LOAD R0, 0
+load R1, 128
+load R2, 2
+load R3, 1
+branch 12, R1, R3
+mod R4, R1, R2
+branch 9, R4, R0
+addi R2, R2, 1
+jump 5
+div R1, R1, R2
+store R2
+jump 4
+exit

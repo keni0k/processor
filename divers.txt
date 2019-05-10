@@ -1,0 +1,13 @@
+LOAD R0, 0
+load R1, 128
+load R2, 2
+load R3, 1
+branch 12, R1, R3
+mod R4, R1, R2
+branch 9, R4, R0
+addi R2, R2, 1
+jump 5
+div R1, R1, R2
+store R2
+jump 4
+exit

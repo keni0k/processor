@@ -1,0 +1,15 @@
+LOAD R0, 0  		#  R0 0  R1 x  R2 x R3 x R4 x R5 x
+load R1, 14  		#     0     N     x    x    x    x
+load R2, 0  		#     0     N     0    x    x    x
+load R3, 1			#     0     N     0    1    x    x
+store R2
+load R5, 1			#     0     N     0    1    x    0
+branch 13, R1, R5	#     0     N     0    1    x    i==N ? JUMP
+store R3
+addi R5, R5, 1		#     0     N     0    1    x    i++
+addi R4, R3, 0
+add R3, R2, R3
+addi R2, R4, 0
+jump 6
+store R3
+exit

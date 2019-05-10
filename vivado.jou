@@ -1,0 +1,131 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu May  9 16:49:45 2019
+# Process ID: 11580
+# Current directory: C:/Programming/schemotechnika/project_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7548 C:\Programming\schemotechnika\project_3\project_3.xpr
+# Log file: C:/Programming/schemotechnika/project_3/vivado.log
+# Journal file: C:/Programming/schemotechnika/project_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Programming/schemotechnika/project_3/project_3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+save_wave_config {C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg}
+run all
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+run all
+save_wave_config {C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {3000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/behav/memory_tb_behav.wcfg
+source memory_tb.tcl
+close_sim

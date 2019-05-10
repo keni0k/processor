@@ -2,7 +2,8 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/synth/func/xsim/memory_tb_func_synth.v,1556423442,verilog,,,,glbl;kernel,,,,,,,,
+C:/Programming/schemotechnika/project_3/project_3.sim/sim_1/synth/func/xsim/memory_tb_func_synth.v,1557394430,verilog,,,,glbl;kernel,,,,,,,,
 C:/Programming/schemotechnika/project_3/project_3.srcs/sim_1/new/memory_tb.sv,1556422592,systemVerilog,,,,memory_tb,,,,,,,,
-C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/ALU.sv,1556423019,systemVerilog,,C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/memory.sv,,ALU,,,,,,,,
+C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/ALU.sv,1557391018,systemVerilog,,C:/Programming/schemotechnika/—хемотехника/adder_64.srcs/sources_1/new/adder_64.sv,,ALU,,,,,,,,
 C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/memory.sv,1556422947,systemVerilog,,C:/Programming/schemotechnika/project_3/project_3.srcs/sim_1/new/memory_tb.sv,,memory,,,,,,,,
+,,,,C:/Programming/schemotechnika/project_3/project_3.srcs/sources_1/new/memory.sv,,adder_4;adder_8,,,,,,,,

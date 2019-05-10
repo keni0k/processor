@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="160800001fs"></ZoomEndTime>
-      <Cursor1Time time="5108000fs"></Cursor1Time>
+      <ZoomStartTime time="1697305800fs"></ZoomStartTime>
+      <ZoomEndTime time="1897305801fs"></ZoomEndTime>
+      <Cursor1Time time="700000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="113"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="154"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="8" />
    <wvobject fp_name="/memory_tb/clkMem" type="logic">
       <obj_property name="ElementShortName">clkMem</obj_property>
       <obj_property name="ObjectShortName">clkMem</obj_property>
@@ -28,16 +28,29 @@
       <obj_property name="ElementShortName">clkALU</obj_property>
       <obj_property name="ObjectShortName">clkALU</obj_property>
    </wvobject>
+   <wvobject fp_name="/memory_tb/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
    <wvobject fp_name="/memory_tb/DUT/output_data" type="array">
       <obj_property name="ElementShortName">output_data[7:0]</obj_property>
       <obj_property name="ObjectShortName">output_data[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/memory_tb/DUT/instrPointer" type="array">
-      <obj_property name="ElementShortName">instrPointer[32:0]</obj_property>
-      <obj_property name="ObjectShortName">instrPointer[32:0]</obj_property>
+      <obj_property name="ElementShortName">instrPointer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instrPointer[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/memory_tb/rez" type="array">
       <obj_property name="ElementShortName">rez[31:0][8:0]</obj_property>
       <obj_property name="ObjectShortName">rez[31:0][8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/exit" type="logic">
+      <obj_property name="ElementShortName">exit</obj_property>
+      <obj_property name="ObjectShortName">exit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
    </wvobject>
 </wave_config>

@@ -1,0 +1,10 @@
+LOAD R0, 0
+load R1, 1
+load r2, 5 # N
+load r3, 0
+store r1
+branch 9, r2, r3
+addi r3, r3, 1
+mul r1, r1, r3
+jump 4
+exit

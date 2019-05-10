@@ -14,11 +14,12 @@ module ALU
 typedef enum logic [3:0] { ADDI, SUBI, ADD, SUB, MUL, DIV,
                            LOAD, STORE,
                            AND, XOR, OR, 
-                           BRANCH, JUMP, NONE } functcode;
+                           BRANCH, JUMP, EXIT, MOD } functcode;
                           
-typedef enum logic [8:0] { OVERFLOW = 9'b100000000, DEVIDE_BY_ZERO = 9'b101000000, 
-                           MINUS = 9'b100100000,
-                           MOVE_X = 9'b110000000, MOVE_Z = 9'b111000000 } errorcode;
+typedef enum logic [8:0] { OVERFLOW = 9'b110000000, DEVIDE_BY_ZERO = 9'b110000001, 
+                           MINUS = 9'b110000010, SUCCESS = 9'b110000011 } exitcode;
+                           
+typedef enum logic [3:0] { INCIP_CODE = 4'b1000, JUMP_CODE = 4'b1001, STORE_CODE = 4'b1010 } code;
 
 logic [3:0] op;
 logic [4:0] destAddr;
@@ -31,7 +32,7 @@ assign destAddr = instruction[19:15];
 assign firstAddr = instruction[14:10];
 assign secondAddr = instruction[9:0];
 
-adder_8 adder(.a(data_in_first), .b(data_in_second), .cin(0), .sum(sum),.cout(cout));
+adder_8 adder(.a(data_in_first), .b(data_in_second), .cin(1'b0), .sum(sum),.cout(cout));
 
 always @(posedge clk) begin
     if (IP_in) begin
@@ -39,22 +40,19 @@ always @(posedge clk) begin
             ADD:  rez <= cout ? OVERFLOW : sum;
             SUB:  rez <= data_in_first >= data_in_second ? 
                          data_in_first - data_in_second : MINUS;
-            MUL:  rez <= data_in_first * data_in_second;
+            MUL:  rez <= data_in_first * data_in_second > 255 ? OVERFLOW : data_in_first * data_in_second;
             DIV:  rez <= data_in_first / data_in_second;
+            MOD:  rez <= data_in_first % data_in_second;
             AND:  rez <= data_in_first & data_in_second;
             OR:   rez <= data_in_first | data_in_second;
             XOR:  rez <= data_in_first ^ data_in_second;
             ADDI: rez <= data_in_first + secondAddr; // adder
             SUBI: rez <= data_in_first - secondAddr;
-            LOAD: 
-                begin
-//                    rez <= instruction[6:0] ? OVEWFLOW : instruction[14:7];
-                    rez <= instruction[14:7];
-                end
-//            STORE:
-//            BRANCH:
-            JUMP: rez <= {4'b1110, destAddr};
-            NONE: rez <= 511;
+            LOAD: rez <= instruction[14:7]; // <= 255
+            STORE: rez <= {STORE_CODE, destAddr};
+            BRANCH: rez <= data_in_first == data_in_second ? {JUMP_CODE, destAddr} : {INCIP_CODE, 5'b00000};
+            JUMP: rez <= {JUMP_CODE, destAddr};
+            EXIT: rez <= SUCCESS;
             default: rez <= 511;
         endcase
     end;
